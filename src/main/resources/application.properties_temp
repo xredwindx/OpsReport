@@ -1,0 +1,12 @@
+#port
+server.port=8282
+
+#mybatis
+mybatis.mapper-locations=mappers/*.xml
+
+#mysql
+spring.datasource.driver-class-name=
+spring.datasource.url=
+spring.datasource.username=
+spring.datasource.password=
+
