@@ -2,9 +2,11 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.solbox.user.dao.UserDao">
-    <select id="getUserList" resultType="hashMap">
-        select uid, uname
-        from user
-        where deleted_yn='N'
+    <select id="getCheckUser" resultType="hashMap">
+        SELECT uid, uname
+        FROM user
+        WHERE deleted_yn='N'
+        AND uid=#uid
+        AND upadd=#pwd
     </select>
 </mapper>
